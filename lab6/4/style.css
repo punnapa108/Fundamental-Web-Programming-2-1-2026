@@ -1,0 +1,66 @@
+.v {
+    justify-self: center;
+    border: none;
+    box-shadow: 0 0 20px rgb(0, 0, 0, 0.3);
+    border-radius: 15px;
+    padding: 10px 50px;
+    margin-top: 50px;
+    font-family: "Mali", cursive;
+    font-size: 20px;
+    width: 40%;
+}
+h1 {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 35px;
+}
+.lbw, .lbm {
+    margin-top: 10px;
+}
+input {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    font-size: 20px;
+    font-family: "Mali", cursive;
+}
+.savebut {
+    text-align: center;
+    margin-top: 15px;
+    width: 100%;
+    font-family: "Mali", cursive;
+    background-color: rgb(79, 136, 221);
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 20px;
+    color: aliceblue;
+}
+.savebut:hover {
+    background-color: rgb(51, 99, 194);
+}
+h3 {
+    margin-bottom: 10px;
+}
+.wordlist {
+    margin-bottom: 10px;
+}
+.w {
+    border-bottom: 1px solid gray;
+}
+.deletebut {
+    background-color: rgb(196, 19, 19);
+    font-family: "Mali", cursive;
+    border: none;
+    font-size: 20px;
+    border-radius: 5px;
+    color: aliceblue;
+}
+.deletebut:hover {
+    background-color: rgb(160, 15, 15);
+}
+.voc {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
