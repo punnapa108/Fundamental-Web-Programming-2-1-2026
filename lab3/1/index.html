@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="validator.js"></script>
+
+</head>
+<body>
+    <form>
+        <h1>User Registration</h1>
+        <p>
+            <label for="Username">Username:</label><br>
+            <input type="text" id="Username" name="Username"/>
+            <span id="usernameError" class="error"></span>
+        </p>
+        <p>
+            <label for="Email">Email:</label><br>
+            <input type="text" id="Email" name="Email" placeholder="e.g.,user@example.com"/>
+            <span id="emailError" class="error"></span>
+        </p>
+        <p>
+            <label for="Phone">Phone:</label><br>
+            <input type="tel" id="Phone" name="Phone" placeholder="e.g.,555-555-5555"/>
+            <span id="phoneError" class="error"></span>
+        </p>
+        <p>
+            <label for="Password">Password:</label><br>
+            <input type="password" id="Password" name="Password"/>
+            <span id="passwordError" class="error"></span>
+        </p>
+        <p>
+            <label for="ConfirmPassword">Confirm Password:</label><br>
+            <input type="password" id="ConfirmPassword" name="ConfirmPassword"/>
+            <span id="confirmError" class="error"></span>
+        </p>
+
+        <button type="button" onclick="validateForm()">Register</button>
+
+    </form>
+
+</body>
+</html>
