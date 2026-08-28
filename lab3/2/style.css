@@ -1,0 +1,24 @@
+#number {
+  display: flex;
+  gap: 10px;
+  margin-top: 15%;
+}
+#number img {
+  width: 150px;
+}
+button {
+  margin-top: 15px;
+  font-size: 24px;
+  border-radius: 5px;
+  background-color: rgb(90, 186, 230);
+  border: none;
+  padding: 5px 10px;
+}
+button:hover {
+  background-color: rgb(28, 144, 238);
+}
+body {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
