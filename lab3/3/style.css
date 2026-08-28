@@ -1,0 +1,29 @@
+h2 {
+    text-align: center;
+    margin-top: 50px;
+}
+table {
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+th, td {
+    border: 1px solid black;
+    width: 80px;
+    padding: 5px;
+    text-align: left;
+}
+button {
+    font-size: 16px;
+    background: dodgerblue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 15px;
+    }
+button:hover {
+      background: #0056b3;
+    }
+.butcon {
+    text-align: center;
+    margin-top: 20px;
+    }
