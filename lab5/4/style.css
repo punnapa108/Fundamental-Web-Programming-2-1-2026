@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: "Bricolage Grotesque", sans-serif;
+    background-color: lch(98.92% 5.67 98.87);
+}
+
+/* navbar */
+.navbar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    box-shadow: 0 5px 8px rgba(0,0,0,0.1);
+ }
+.navbar .colnavbar:last-child {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 30px;
+}
+.navbar h3 {
+    font-size: 24px;
+    margin-left: 30px;
+}
+.navbar a {
+    text-decoration: none;
+    color: black;
+    margin-right: 15px;
+}
+
+/* Header */
+.header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 30px;
+    margin-top: 50px;
+    align-items: center;
+}
+.header .colHeader:last-child {
+    display: flex;
+    justify-content: flex-end;
+}
+.header img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+#faculty {
+    color: blue;
+}
+#name {
+    font-size: 36px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+#studentID {
+    color: gray;
+}
+
+/* skill */
+.skill {
+    margin: 30px;
+}
+.skill h2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+#skillh21 {
+    margin-bottom: 0px;
+}
+#skilltxt1 {
+    margin-top: 0px;
+}
+
+#num1 {
+    color: white;
+    padding: 3px 7px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(47, 47, 162);
+}
+#num2 {
+    color: white;
+    padding: 3px 7px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(47, 47, 162);
+}
+
+/* skillbox */
+.skillBox {
+    margin: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.column {
+    border: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    padding: 0px 15px;
+    background-color: white;
+    border-radius: 10px
+}
+.column p {
+    margin: 10px;
+}
+#syntax {
+    color: blue;
+}
+#nameLang {
+    font-size: 20px;
+    font-weight: 600;
+}
+#langtxt {
+    color: gray;
+}
+
+/* Footer */
+.footer {
+    border-top: 1px solid gray;
+    margin-top: 50px;
+}
+#gmail {
+    margin: 30px;
+}
+#gmail a {
+    color: black;
+}
+
+@media (max-width: 992px) {
+    .skillBox {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .skillBox {
+        grid-template-columns: 1fr;
+    }
+
+    .header {
+        grid-template-columns: 1fr;
+    }
+    .header .colHeader:first-child {
+        order: 2;
+        text-align: center; 
+    }
+    .header .colHeader:last-child {
+        order: 1;
+        justify-content: center;
+    }
+    .navbar {
+        grid-template-columns: 1fr;
+    }
+    .navbar .colnavbar:last-child {
+        justify-content: center;
+        justify-self: left;
+        margin-left: 30px;
+        margin-bottom: 30px;
+    }
+}
