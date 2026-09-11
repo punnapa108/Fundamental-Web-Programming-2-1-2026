@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Book</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1>แก้ไขหนังสือ</h1>
+    <form action="/edit/<%= data.id %>" method="POST">
+        <label>ID:</label><br>
+        <input type="text" name="id" value="<%= data.id %>" readonly><br>
+
+        <label>ชื่อหนังสือ:</label><br>
+        <input type="text" name="title" value="<%= data.title %>"><br>
+
+        <label>ผู้แต่ง:</label><br>
+        <input type="text" name="author" value="<%= data.author %>"><br>
+
+        <label>หมวดหมู่:</label><br>
+        <input type="text" name="category" value="<%= data.category %>"><br>
+
+        <label>ราคา:</label><br>
+        <input type="number" name="price" value="<%= data.price %>"><br>
+
+        <label>จำนวนในสต็อก:</label><br>
+        <input type="number" name="stock" value="<%= data.stock %>"><br>
+        
+        <div class="btn-group">
+            <button type="submit" class="btn-sub-edit">อัปเดต</button>
+            <button type="button" onclick="window.location.href='/'" class="btn-cancle">ยกเลิก</button>
+        </div>
+    </form>
+</body>
+</html>
