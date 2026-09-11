@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Bookstore Management</h1>
+    <!--add book-->
+    <a href="/add" class="btn-add">+ เพิ่มหนังสือ</a>
+    
+    <!--books table-->
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>ชื่อหนังสือ</th>
+                <th>ผู้แต่ง</th>
+                <th>หมวดหมู่</th>
+                <th>ราคา</th>
+                <th>สต็อก</th>
+                <th>จัดการ</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% data.forEach((item)=>{ %>
+            <tr>
+                <td><%= item.id %></td>
+                <td><%= item.title %></td>
+                <td><%= item.author %></td>
+                <td><p class="category"><%= item.category %></p></td>
+                <td><%= item.price %> ฿</td>
+                <td><%= item.stock %></td>
+                <td>
+                    <!--edit-->
+                    <a href="/edit/<%= item.id %>" class="btn-edit">แก้ไข</a>
+                    <!--delete-->
+                    <a href="/delete/<%= item.id %>" class="btn-delete" onclick="return confirm('ยืนยันการลบหนังสือเล่มนี้')">ลบ</a>
+                </td>
+            </tr>
+            <% }); %>
+        </tbody>
+    </table>
+    <p>ทั้งหมด <%= data.length %> รายการ</p>
+</body>
+</html>
