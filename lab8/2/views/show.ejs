@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1>The most Popular albums</h1>
+    <div class="grid">
+        <% data.forEach((item) => { %>
+        <div class="card">
+            <img src="<%= item.album_cover %>">
+            <h2><%= item.song %></h2>
+            <p>Album: <%= item.album %> (<%= item.year %>)</p>
+            <p>Artist: <%= item.artist %></p>
+            <p>Genre: <%= item.genre %></p>
+        </div>
+        <% }) %>
+    </div>
+</body>
+</html>
