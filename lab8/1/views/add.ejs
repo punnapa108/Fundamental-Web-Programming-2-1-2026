@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Book</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>เพิ่มหนังสือใหม่</h1>
+
+    <% 
+      let nextId = "B001";
+      if (data && data.length > 0) {
+        let lastId = data[data.length - 1].id;
+        let num = parseInt(lastId.substring(1)) + 1;
+        nextId = 'B' + String(num).padStart(3, '0');
+      }
+    %>
+
+    <form action="/add" method="POST">
+        <label>ID:</label><br>
+        <input type="text" name="id" value="<%= nextId %>" readonly><br>
+        <label>ชื่อหนังสือ:</label><br>
+        <input type="text" name="title" id="title"><br>
+
+        <label>ผู้แต่ง:</label><br>
+        <input type="text" name="author" id="author"><br>
+
+        <label>หมวดหมู่:</label><br>
+        <input type="text" name="category" id="category"><br>
+
+        <label>ราคา:</label><br>
+        <input type="number" name="price" id="price"><br>
+
+        <label>จำนวนในสต็อก:</label><br>
+        <input type="number" name="stock" id="stock"><br>
+        
+        <div class="btn-group">
+            <button type="submit" class="btn-sub-add">บันทึก</button>
+            <button type="button" onclick="window.location.href='/'" class="btn-cancle">ยกเลิก</button>
+        </div>
+    </form>
+
+</body>
+</html>
